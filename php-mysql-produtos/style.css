@@ -1,0 +1,124 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.25;
+    color: #333;
+}
+.erro {
+    color: #F44;
+}
+/* Listagem com filtro */
+#listagem_produtos {
+    max-width: 90%;
+}
+div#listagem_produtos label {
+    display: block;
+    margin: 10px 0 0 0;
+}
+div#listagem_produtos table {
+    font-family: sans-serif;
+    font-size: 1.2em;
+}
+div#listagem_produtos td {
+    vertical-align: middle;
+}
+div#listagem_produtos td.imagem {
+    text-align: center;
+    padding: 10px;
+}
+div#listagem_produtos td img {
+    border: 5px dashed red;
+}
+div#listagem_produtos .busca input {
+    border: 2px solid #d6d4d4;
+}
+div#listagem_produtos .busca input:focus {
+    box-shadow: none;
+    border: 1px solid grey;
+}
+div#listagem_produtos .icones {
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-around;
+}
+div#listagem_produtos table caption {
+    margin: 4px;
+    color: black;
+    font-weight: bolder;
+    font-size: 150%;
+    text-align: center;
+    caption-side: top;
+}
+/* Página de CRUD */
+div#crud {
+    line-height: 0.7;
+}
+#iFoto {
+    opacity: 0;
+}
+#iFoto-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-40%);
+}
+#area-imagem {
+    border: 2px dashed rgba(255, 0, 0, 0.7);
+    background-color: #eee;
+    padding: 0.25rem;
+    position: relative;
+    max-height: 150px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+#area-imagem img:hover, #area-imagem:hover {
+    cursor: pointer;
+}
+legend.scheduler-border {
+    font-size: 1em !important;
+    text-align: left !important;
+    width: auto;
+    padding: 0 10px;
+    border-bottom: none;
+    margin-top: -10px;
+    background-color: white;
+    color: black;
+    line-height: 0.6;
+}
+.legenda {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* Página de detalhes */
+div#detalhes_produto {
+    width: 800px;
+    margin: 50px auto;
+    font-family: sans-serif;
+    font-size: 24px;
+}
+div#detalhes_produto h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+div#detalhes_produto ul {
+    margin: 0;
+    padding: 0;
+}
+div#detalhes_produto li {
+    list-style-type: none;
+    line-height: 31px;
+}
+div#detalhes_produto li.imagem {
+    display: flex;
+    float: left;
+    text-align: center;
+    border: 1px solid #ddd;
+    height: 300px;
+    padding: 20px;
+    align-items: center;
+    margin-right: 25px;
+}
+div#detalhes_produto img {
+    border-radius: 50%;
+    box-shadow: 0px 6px 5px #ccc;
+}
