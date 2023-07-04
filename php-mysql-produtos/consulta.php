@@ -158,11 +158,12 @@ WHERE p.descricao_prd LIKE :descricao_prd ');
         $('.btn-excluir').click(function() {
             elemento = $(this).parent().parent().parent();
             codigo_prd = $(this).data('codigo_prd');
-            let descricao_prd = $(this).data('descricao_prd');
+            let descricao_pd = $(this).data('descricao_prd');
             let texto = `Clique em Ok para excluir o registro "<strong>${codigo_prd} -
 ${descricao_prd}</strong>"&hellip;`;
             $('.modal-body').html(texto);
         });
+
         $('#ok_confirm').click(function() {
             $.ajax({
                 type: 'POST',

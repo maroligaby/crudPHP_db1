@@ -12,8 +12,8 @@ if(isset($_POST['submit'])) {
         $stmt = $conn->prepare('INSERT INTO produto (descricao_prd, data_cadastro, preco, tipo_comissao, ativo, codigo_ctg,
 foto) VALUES(:descricao_prd, :data_cadastro, :preco, :tipo_comissao, :ativo, :codigo_ctg, :foto)');
         if (empty($_FILES['foto']['tmp_name'])) {
-            $foto = file_get_contents('default.png');
-        } else {
+            $foto = file_get_contents('default.png');}
+        else {
             $foto = file_get_contents($_FILES['foto']['tmp_name']);
         }
         $stmt->execute(array(
@@ -24,15 +24,15 @@ foto) VALUES(:descricao_prd, :data_cadastro, :preco, :tipo_comissao, :ativo, :co
             ':ativo' => $ativo,
             ':codigo_ctg' => $_POST['codigo_ctg'],
             ':foto' => $foto
-        ));
-    } else {
+        ));}
+    else {
         $estadoFoto = (boolean) $_COOKIE['fotoLimpada'];
         $sql = 'UPDATE produto SET descricao_prd = :descricao_prd, data_cadastro = :data_cadastro, preco = :preco, tipo_comissao = :tipo_comissao,
 ativo = :ativo, codigo_ctg = :codigo_ctg';
         if (!empty($_FILES['foto']['tmp_name'])) {
             $sql .= ', foto = :foto';
-            $foto = file_get_contents($_FILES['foto']['tmp_name']);
-        } else if ($estadoFoto) {
+            $foto = file_get_contents($_FILES['foto']['tmp_name']);}
+        else if ($estadoFoto) {
             $sql .= ', foto = :foto';
             $foto = file_get_contents('default.png');
         }
@@ -176,7 +176,7 @@ ativo = :ativo, codigo_ctg = :codigo_ctg';
                 }
                 ?>
             </select>
-            <label for="id_curso">Curso</label>
+            <label for="id_curso">Categoria</label>
         </div>
         <div class="form-group">
             <div class="input-group mb-1 px-2 py-2 rounded-pill bg-white shadow-sm">
@@ -254,6 +254,7 @@ rounded shadow-sm"/>';
             reader.readAsDataURL(input.files[0]);
         }
     }
+
     window.onload = function(e) {
         document.cookie = 'fotoLimpada=0';
         const fotoForm = document.querySelector("#iFoto");
